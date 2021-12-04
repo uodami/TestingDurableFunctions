@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestingDurableFunction", "TestingDurableFunction\TestingDurableFunction.csproj", "{8BDA4E2F-AF6C-4538-B150-B6C23CC009B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestingDurableFunction.Specflow", "TestingDurableFunction.Specflow\TestingDurableFunction.Specflow.csproj", "{2C3BA096-B108-41DF-89B0-0C107DA6DFCC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8BDA4E2F-AF6C-4538-B150-B6C23CC009B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BDA4E2F-AF6C-4538-B150-B6C23CC009B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BDA4E2F-AF6C-4538-B150-B6C23CC009B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BDA4E2F-AF6C-4538-B150-B6C23CC009B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C3BA096-B108-41DF-89B0-0C107DA6DFCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C3BA096-B108-41DF-89B0-0C107DA6DFCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C3BA096-B108-41DF-89B0-0C107DA6DFCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C3BA096-B108-41DF-89B0-0C107DA6DFCC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DA9D9949-C6BE-4CA4-BE74-0211647D5D48}
+	EndGlobalSection
+EndGlobal
