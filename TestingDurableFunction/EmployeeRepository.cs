@@ -1,16 +1,31 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace TestingDurableFunction
 {
     public interface IEmployeeRepository
     {
         Task SaveEmployeeAsync(Employee employee);
+        Task<List<Employee>> GetEmployeesAsync();
     }
+    
     public class EmployeeRepository : IEmployeeRepository
     {
-        public Task SaveEmployeeAsync(Employee employee)
+        private readonly List<Employee> _employees;
+
+        public EmployeeRepository()
         {
-            return Task.CompletedTask;
+            _employees = new List<Employee>();
+        }
+        
+        public async Task SaveEmployeeAsync(Employee employee)
+        {
+            _employees.Add(employee);
+        }
+
+        public async Task<List<Employee>> GetEmployeesAsync()
+        {
+            return _employees;
         }
     }
 }

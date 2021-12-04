@@ -10,13 +10,15 @@ namespace TestingDurableFunction
 {
     public class TestingDurableFunction
     {
-        private readonly IEmployeeLegacyClient _employeeLegacyClient;
+        private readonly IEmployeesLegacyClient _employeesLegacyClient;
         private readonly IEmployeeRepository _employeeRepository;
 
-        public TestingDurableFunction()
+        public TestingDurableFunction(
+            IEmployeesLegacyClient client,
+            IEmployeeRepository repository)
         {
-            _employeeLegacyClient = new EmployeesLegacyClient();
-            _employeeRepository = new EmployeeRepository();
+            _employeesLegacyClient = client;
+            _employeeRepository = repository;
         }
 
         [FunctionName("MigrateEmployees")]
@@ -40,7 +42,7 @@ namespace TestingDurableFunction
         [FunctionName("MigrateEmployees_GetEmployees")]
         public async Task<List<EmployeeLegacyResponse>> MigrateEmployees_GetEmployees([ActivityTrigger] string name)
         {
-            return await _employeeLegacyClient.GetEmployeesAsync();
+            return await _employeesLegacyClient.GetEmployeesAsync();
         }
 
         [FunctionName("MigrateEmployees_SaveEmployee")]

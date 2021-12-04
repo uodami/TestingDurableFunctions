@@ -3,12 +3,12 @@ using System.Threading.Tasks;
 
 namespace TestingDurableFunction
 {
-    public interface IEmployeeLegacyClient
+    public interface IEmployeesLegacyClient
     {
         Task<List<EmployeeLegacyResponse>> GetEmployeesAsync();
     }
 
-    public class EmployeesLegacyClient : IEmployeeLegacyClient
+    public class EmployeesesLegacyClient : IEmployeesLegacyClient
     {
         public Task<List<EmployeeLegacyResponse>> GetEmployeesAsync()
         {
